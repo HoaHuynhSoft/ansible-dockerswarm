@@ -2,5 +2,7 @@
 
 - name: "Provision a Docker Swarm cluster"
   hosts: all
+  vars:
+    docker_yum_repo: https://download.docker.com/linux/centos/7/aarch64/stable/
   roles:
-    - { role: ansible-dockerswarm }
+    - { role: atosatto.docker-swarm }

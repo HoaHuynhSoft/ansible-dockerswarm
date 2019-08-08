@@ -19,7 +19,7 @@
     state: present
   when: ansible_os_family == 'Debian'
 
-- name: Add the YUM Docker repository.
+- name: Add the YUM Docker {{ docker_yum_repo }} repository .
   yum_repository:
     name: docker
     description: Docker Repository
